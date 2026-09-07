@@ -1,0 +1,30 @@
+[
+  {
+    "repository": "https://github.com/kumwe/extension-sdk",
+    "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalNavigationDefinition",
+    "new_fqcn": "Kumwe\\Portal\\Contract\\PortalNavigationDefinition",
+    "source_path": "src/Spi/Portal/Contribution/PortalNavigationDefinition.php",
+    "target_path": "src/PortalNavigationDefinition.php"
+  },
+  {
+    "repository": "https://github.com/kumwe/extension-sdk",
+    "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalRouteDefinition",
+    "new_fqcn": "Kumwe\\Portal\\Contract\\PortalRouteDefinition",
+    "source_path": "src/Spi/Portal/Contribution/PortalRouteDefinition.php",
+    "target_path": "src/PortalRouteDefinition.php"
+  },
+  {
+    "repository": "https://github.com/kumwe/extension-sdk",
+    "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalTemplateDefinition",
+    "new_fqcn": "Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
+    "source_path": "src/Spi/Portal/Contribution/PortalTemplateDefinition.php",
+    "target_path": "src/PortalTemplateDefinition.php"
+  },
+  {
+    "repository": "https://github.com/kumwe/extension-sdk",
+    "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalWorkspaceDefinition",
+    "new_fqcn": "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition",
+    "source_path": "src/Spi/Portal/Contribution/PortalWorkspaceDefinition.php",
+    "target_path": "src/PortalWorkspaceDefinition.php"
+  }
+]
