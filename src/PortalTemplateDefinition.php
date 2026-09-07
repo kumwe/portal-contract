@@ -28,7 +28,8 @@ final readonly class PortalTemplateDefinition implements ContributionDefinition
     {
         PortalWorkspaceDefinition::assertIdentifier($name, 'template');
         if (
-            preg_match('#^(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+\.twig$#D', $template) !== 1
+            strlen($template) > 255
+            || preg_match('#^(?:[A-Za-z0-9_.-]+/)*[A-Za-z0-9_.-]+\.twig$#D', $template) !== 1
             || str_contains($template, '..')
         ) {
             throw new InvalidArgumentException('A contributed portal template path is unsafe.');

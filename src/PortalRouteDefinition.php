@@ -53,7 +53,11 @@ final readonly class PortalRouteDefinition implements ContributionDefinition
     ) {
         PortalWorkspaceDefinition::assertIdentifier($name, 'route');
         PortalWorkspaceDefinition::assertIdentifier($template, 'template');
-        if (preg_match('#^/(?:[a-z0-9][a-z0-9-]*(?:/|$))*$#D', $path) !== 1 || str_contains($path, '..')) {
+        if (
+            strlen($path) > 2048
+            || preg_match('#^/(?:[a-z0-9][a-z0-9-]*(?:/|$))*$#D', $path) !== 1
+            || str_contains($path, '..')
+        ) {
             throw new InvalidArgumentException('A contributed portal route path is unsafe.');
         }
         if (!array_is_list($methods) || $methods === [] || count($methods) > 8) {

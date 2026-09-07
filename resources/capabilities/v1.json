@@ -1,21 +1,36 @@
 {
-  "schema": "kumwe-package-capabilities/v1",
-  "package": "kumwe/portal-contract",
-  "namespace": "Kumwe\\Portal\\Contract\\",
-  "responsibility": "Explicitly admitted portal contribution declarations and bounded presentation contracts.",
-  "non_responsibilities": [
-    "host authorization",
-    "persistence adapters",
-    "active registries",
-    "HTTP routing",
-    "template rendering",
-    "transactions"
-  ],
-  "capabilities": [
-    {
-      "id": "portal-contract",
-      "description": "Explicitly admitted portal contribution declarations and bounded presentation contracts."
-    }
-  ],
-  "completion_claim": false
+    "schema": "kumwe-package-capabilities/v1",
+    "package": "kumwe/portal-contract",
+    "namespace": "Kumwe\\Portal\\Contract\\",
+    "responsibility": "Explicitly admitted portal contribution declarations and bounded presentation contracts.",
+    "non_responsibilities": [
+        "host authorization",
+        "persistence adapters",
+        "active registries",
+        "HTTP routing",
+        "template rendering",
+        "transactions"
+    ],
+    "capabilities": [
+        {
+            "id": "portal-contract.portable-contract",
+            "description": "Explicitly admitted portal contribution declarations and bounded presentation contracts.",
+            "title": "Portal Contract",
+            "symbols": [
+                "Kumwe\\Portal\\Contract\\PortalContributionAdmission",
+                "Kumwe\\Portal\\Contract\\PortalNavigationDefinition",
+                "Kumwe\\Portal\\Contract\\PortalRouteDefinition",
+                "Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
+                "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition"
+            ],
+            "documentation": [
+                "docs/public-api.md",
+                "docs/architecture.md",
+                "docs/readiness-review.md"
+            ]
+        }
+    ],
+    "release": "0.2.0",
+    "native_requirements": null,
+    "deprecations": []
 }

@@ -33,10 +33,10 @@ final readonly class PortalWorkspaceDefinition implements ContributionDefinition
         public int $priority,
     ) {
         self::assertIdentifier($id, 'workspace');
-        if (trim($label) === '' || mb_strlen($label) > 80) {
+        if (!mb_check_encoding($label, 'UTF-8') || trim($label) === '' || mb_strlen($label) > 80) {
             throw new InvalidArgumentException('A portal workspace label must contain 1 to 80 characters.');
         }
-        if (trim($description) === '' || mb_strlen($description) > 255) {
+        if (!mb_check_encoding($description, 'UTF-8') || trim($description) === '' || mb_strlen($description) > 255) {
             throw new InvalidArgumentException('A portal workspace description must contain 1 to 255 characters.');
         }
         if ($priority < 0 || $priority > 100_000) {

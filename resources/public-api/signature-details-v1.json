@@ -1,516 +1,501 @@
 {
-    "schema": "kumwe-package-public-api/v1",
+    "schema": "kumwe-public-api-details/v1",
     "package": "kumwe/portal-contract",
     "release": "0.2.0",
     "namespace": "Kumwe\\Portal\\Contract\\",
-    "symbols": {
-        "Kumwe\\Portal\\Contract\\PortalContributionAdmission": {
+    "symbols": [
+        {
+            "name": "Kumwe\\Portal\\Contract\\PortalContributionAdmission",
             "kind": "class",
-            "stability": "stable",
-            "file": "src/PortalContributionAdmission.php",
-            "abstract": false,
-            "final": true,
-            "readonly": true,
-            "parent": null,
-            "interfaces": [
-                "Kumwe\\Contribution\\ContributionDefinition"
-            ],
-            "constants": {},
-            "properties": {
-                "owner": {
-                    "type": "Kumwe\\Contribution\\ContributionOwner",
-                    "static": false,
-                    "readonly": true
-                },
-                "definition": {
-                    "type": "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition|Kumwe\\Portal\\Contract\\PortalNavigationDefinition|Kumwe\\Portal\\Contract\\PortalRouteDefinition|Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
-                    "static": false,
-                    "readonly": true
-                },
-                "requiredCapability": {
-                    "type": "Kumwe\\Access\\Capability",
-                    "static": false,
-                    "readonly": true
-                },
-                "exposed": {
-                    "type": "bool",
-                    "static": false,
-                    "readonly": true
-                }
-            },
-            "methods": {
-                "__construct": {
-                    "visibility": "public",
+            "methods": [
+                {
+                    "name": "__construct",
                     "static": false,
                     "parameters": [
                         {
                             "name": "owner",
                             "type": "Kumwe\\Contribution\\ContributionOwner",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "definition",
                             "type": "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition|Kumwe\\Portal\\Contract\\PortalNavigationDefinition|Kumwe\\Portal\\Contract\\PortalRouteDefinition|Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "requiredCapability",
                             "type": "Kumwe\\Access\\Capability",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "exposed",
                             "type": "bool",
                             "optional": true,
+                            "default": "false",
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         }
                     ],
-                    "return": null
+                    "return": ""
                 },
-                "identifier": {
-                    "visibility": "public",
+                {
+                    "name": "identifier",
                     "static": false,
                     "parameters": [],
                     "return": "string"
                 },
-                "toArray": {
-                    "visibility": "public",
+                {
+                    "name": "toArray",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 }
-            },
-            "deprecated": null
-        },
-        "Kumwe\\Portal\\Contract\\PortalNavigationDefinition": {
-            "kind": "class",
-            "stability": "stable",
-            "file": "src/PortalNavigationDefinition.php",
-            "abstract": false,
-            "final": true,
-            "readonly": true,
-            "parent": null,
-            "interfaces": [
-                "Kumwe\\Contribution\\ContributionDefinition"
             ],
-            "constants": {},
-            "properties": {
-                "capability": {
-                    "type": "string",
-                    "static": false,
+            "properties": [
+                {
+                    "name": "owner",
+                    "type": "Kumwe\\Contribution\\ContributionOwner",
                     "readonly": true
                 },
-                "id": {
-                    "type": "string",
-                    "static": false,
+                {
+                    "name": "definition",
+                    "type": "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition|Kumwe\\Portal\\Contract\\PortalNavigationDefinition|Kumwe\\Portal\\Contract\\PortalRouteDefinition|Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
                     "readonly": true
                 },
-                "workspace": {
-                    "type": "string",
-                    "static": false,
+                {
+                    "name": "requiredCapability",
+                    "type": "Kumwe\\Access\\Capability",
                     "readonly": true
                 },
-                "label": {
-                    "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "description": {
-                    "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "path": {
-                    "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "icon": {
-                    "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "priority": {
-                    "type": "int",
-                    "static": false,
-                    "readonly": true
-                },
-                "keywords": {
-                    "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "surface": {
-                    "type": "?string",
-                    "static": false,
+                {
+                    "name": "exposed",
+                    "type": "bool",
                     "readonly": true
                 }
-            },
-            "methods": {
-                "__construct": {
-                    "visibility": "public",
+            ],
+            "constants": [],
+            "constant_values": []
+        },
+        {
+            "name": "Kumwe\\Portal\\Contract\\PortalNavigationDefinition",
+            "kind": "class",
+            "methods": [
+                {
+                    "name": "__construct",
                     "static": false,
                     "parameters": [
                         {
                             "name": "id",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "workspace",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "label",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "description",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "path",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "icon",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "capability",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "priority",
                             "type": "int",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "keywords",
                             "type": "string",
                             "optional": true,
+                            "default": "''",
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "surface",
                             "type": "?string",
                             "optional": true,
+                            "default": "NULL",
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         }
                     ],
-                    "return": null
+                    "return": ""
                 },
-                "identifier": {
-                    "visibility": "public",
+                {
+                    "name": "identifier",
                     "static": false,
                     "parameters": [],
                     "return": "string"
                 },
-                "toArray": {
-                    "visibility": "public",
+                {
+                    "name": "toArray",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 }
-            },
-            "deprecated": null
-        },
-        "Kumwe\\Portal\\Contract\\PortalRouteDefinition": {
-            "kind": "class",
-            "stability": "stable",
-            "file": "src/PortalRouteDefinition.php",
-            "abstract": false,
-            "final": true,
-            "readonly": true,
-            "parent": null,
-            "interfaces": [
-                "Kumwe\\Contribution\\ContributionDefinition"
             ],
-            "constants": {},
-            "properties": {
-                "methods": {
-                    "type": "array",
-                    "static": false,
+            "properties": [
+                {
+                    "name": "capability",
+                    "type": "string",
                     "readonly": true
                 },
-                "capability": {
+                {
+                    "name": "id",
                     "type": "string",
-                    "static": false,
                     "readonly": true
                 },
-                "name": {
+                {
+                    "name": "workspace",
                     "type": "string",
-                    "static": false,
                     "readonly": true
                 },
-                "path": {
+                {
+                    "name": "label",
                     "type": "string",
-                    "static": false,
                     "readonly": true
                 },
-                "template": {
+                {
+                    "name": "description",
                     "type": "string",
-                    "static": false,
+                    "readonly": true
+                },
+                {
+                    "name": "path",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "icon",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "priority",
+                    "type": "int",
+                    "readonly": true
+                },
+                {
+                    "name": "keywords",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "surface",
+                    "type": "?string",
                     "readonly": true
                 }
-            },
-            "methods": {
-                "__construct": {
-                    "visibility": "public",
+            ],
+            "constants": [],
+            "constant_values": []
+        },
+        {
+            "name": "Kumwe\\Portal\\Contract\\PortalRouteDefinition",
+            "kind": "class",
+            "methods": [
+                {
+                    "name": "__construct",
                     "static": false,
                     "parameters": [
                         {
                             "name": "name",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "path",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "methods",
                             "type": "array",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "capability",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "template",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         }
                     ],
-                    "return": null
+                    "return": ""
                 },
-                "identifier": {
-                    "visibility": "public",
+                {
+                    "name": "identifier",
                     "static": false,
                     "parameters": [],
                     "return": "string"
                 },
-                "toArray": {
-                    "visibility": "public",
+                {
+                    "name": "toArray",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 }
-            },
-            "deprecated": null
-        },
-        "Kumwe\\Portal\\Contract\\PortalTemplateDefinition": {
-            "kind": "class",
-            "stability": "stable",
-            "file": "src/PortalTemplateDefinition.php",
-            "abstract": false,
-            "final": true,
-            "readonly": true,
-            "parent": null,
-            "interfaces": [
-                "Kumwe\\Contribution\\ContributionDefinition"
             ],
-            "constants": {},
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "static": false,
+            "properties": [
+                {
+                    "name": "methods",
+                    "type": "array",
                     "readonly": true
                 },
-                "template": {
+                {
+                    "name": "capability",
                     "type": "string",
-                    "static": false,
+                    "readonly": true
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "path",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "template",
+                    "type": "string",
                     "readonly": true
                 }
-            },
-            "methods": {
-                "__construct": {
-                    "visibility": "public",
+            ],
+            "constants": [],
+            "constant_values": []
+        },
+        {
+            "name": "Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
+            "kind": "class",
+            "methods": [
+                {
+                    "name": "__construct",
                     "static": false,
                     "parameters": [
                         {
                             "name": "name",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "template",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         }
                     ],
-                    "return": null
+                    "return": ""
                 },
-                "identifier": {
-                    "visibility": "public",
+                {
+                    "name": "identifier",
                     "static": false,
                     "parameters": [],
                     "return": "string"
                 },
-                "toArray": {
-                    "visibility": "public",
+                {
+                    "name": "toArray",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 }
-            },
-            "deprecated": null
-        },
-        "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition": {
-            "kind": "class",
-            "stability": "stable",
-            "file": "src/PortalWorkspaceDefinition.php",
-            "abstract": false,
-            "final": true,
-            "readonly": true,
-            "parent": null,
-            "interfaces": [
-                "Kumwe\\Contribution\\ContributionDefinition"
             ],
-            "constants": {},
-            "properties": {
-                "id": {
+            "properties": [
+                {
+                    "name": "name",
                     "type": "string",
-                    "static": false,
                     "readonly": true
                 },
-                "label": {
+                {
+                    "name": "template",
                     "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "description": {
-                    "type": "string",
-                    "static": false,
-                    "readonly": true
-                },
-                "priority": {
-                    "type": "int",
-                    "static": false,
                     "readonly": true
                 }
-            },
-            "methods": {
-                "__construct": {
-                    "visibility": "public",
+            ],
+            "constants": [],
+            "constant_values": []
+        },
+        {
+            "name": "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition",
+            "kind": "class",
+            "methods": [
+                {
+                    "name": "__construct",
                     "static": false,
                     "parameters": [
                         {
                             "name": "id",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "label",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "description",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "priority",
                             "type": "int",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         }
                     ],
-                    "return": null
+                    "return": ""
                 },
-                "assertIdentifier": {
-                    "visibility": "public",
+                {
+                    "name": "assertIdentifier",
                     "static": true,
                     "parameters": [
                         {
                             "name": "identifier",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         },
                         {
                             "name": "kind",
                             "type": "string",
                             "optional": false,
+                            "default": null,
                             "variadic": false,
-                            "by_reference": false
+                            "reference": false
                         }
                     ],
                     "return": "void"
                 },
-                "identifier": {
-                    "visibility": "public",
+                {
+                    "name": "identifier",
                     "static": false,
                     "parameters": [],
                     "return": "string"
                 },
-                "toArray": {
-                    "visibility": "public",
+                {
+                    "name": "toArray",
                     "static": false,
                     "parameters": [],
                     "return": "array"
                 }
-            },
-            "deprecated": null
+            ],
+            "properties": [
+                {
+                    "name": "id",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "label",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "readonly": true
+                },
+                {
+                    "name": "priority",
+                    "type": "int",
+                    "readonly": true
+                }
+            ],
+            "constants": [],
+            "constant_values": []
         }
-    },
-    "extension_points": [],
-    "digest_of": "src/"
+    ]
 }
