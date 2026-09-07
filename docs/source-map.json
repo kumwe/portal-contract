@@ -4,27 +4,97 @@
     "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalNavigationDefinition",
     "new_fqcn": "Kumwe\\Portal\\Contract\\PortalNavigationDefinition",
     "source_path": "src/Spi/Portal/Contribution/PortalNavigationDefinition.php",
-    "target_path": "src/PortalNavigationDefinition.php"
+    "target_path": "src/PortalNavigationDefinition.php",
+    "source_commit": "e8ec23f155c5836c6bd083f154a8efb6e50aec66",
+    "source_sha256": "098e6d41a25254566729de1a807b2131ac3bc90f0dd92d3f636eea2fe3a23012",
+    "kind": "class",
+    "public_methods": [
+      "__construct",
+      "identifier",
+      "toArray"
+    ],
+    "public_properties": [
+      "capability",
+      "id",
+      "workspace",
+      "label",
+      "description",
+      "path",
+      "icon",
+      "priority",
+      "keywords",
+      "surface"
+    ],
+    "public_constants": [],
+    "compatibility": "namespace ownership move; see COMPATIBILITY.md"
   },
   {
     "repository": "https://github.com/kumwe/extension-sdk",
     "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalRouteDefinition",
     "new_fqcn": "Kumwe\\Portal\\Contract\\PortalRouteDefinition",
     "source_path": "src/Spi/Portal/Contribution/PortalRouteDefinition.php",
-    "target_path": "src/PortalRouteDefinition.php"
+    "target_path": "src/PortalRouteDefinition.php",
+    "source_commit": "e8ec23f155c5836c6bd083f154a8efb6e50aec66",
+    "source_sha256": "1b037cedcb1e0be3b99383dcc797569b0e5e83e7979824ac3e297503d96ebed3",
+    "kind": "class",
+    "public_methods": [
+      "__construct",
+      "identifier",
+      "toArray"
+    ],
+    "public_properties": [
+      "methods",
+      "capability",
+      "name",
+      "path",
+      "template"
+    ],
+    "public_constants": [],
+    "compatibility": "namespace ownership move; see COMPATIBILITY.md"
   },
   {
     "repository": "https://github.com/kumwe/extension-sdk",
     "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalTemplateDefinition",
     "new_fqcn": "Kumwe\\Portal\\Contract\\PortalTemplateDefinition",
     "source_path": "src/Spi/Portal/Contribution/PortalTemplateDefinition.php",
-    "target_path": "src/PortalTemplateDefinition.php"
+    "target_path": "src/PortalTemplateDefinition.php",
+    "source_commit": "e8ec23f155c5836c6bd083f154a8efb6e50aec66",
+    "source_sha256": "3c8a1b8d559666844676b90b4a3c0f25ec97dbbf0f056a05e2cb7041e94cec17",
+    "kind": "class",
+    "public_methods": [
+      "__construct",
+      "identifier",
+      "toArray"
+    ],
+    "public_properties": [
+      "name",
+      "template"
+    ],
+    "public_constants": [],
+    "compatibility": "namespace ownership move; see COMPATIBILITY.md"
   },
   {
     "repository": "https://github.com/kumwe/extension-sdk",
     "old_fqcn": "Kumwe\\Extension\\Spi\\Portal\\Contribution\\PortalWorkspaceDefinition",
     "new_fqcn": "Kumwe\\Portal\\Contract\\PortalWorkspaceDefinition",
     "source_path": "src/Spi/Portal/Contribution/PortalWorkspaceDefinition.php",
-    "target_path": "src/PortalWorkspaceDefinition.php"
+    "target_path": "src/PortalWorkspaceDefinition.php",
+    "source_commit": "e8ec23f155c5836c6bd083f154a8efb6e50aec66",
+    "source_sha256": "42c37396f476673d7fe58c21e44f77054d352e2b8f0233753b79e022e789a6e1",
+    "kind": "class",
+    "public_methods": [
+      "__construct",
+      "assertIdentifier",
+      "identifier",
+      "toArray"
+    ],
+    "public_properties": [
+      "id",
+      "label",
+      "description",
+      "priority"
+    ],
+    "public_constants": [],
+    "compatibility": "namespace ownership move; see COMPATIBILITY.md"
   }
 ]
