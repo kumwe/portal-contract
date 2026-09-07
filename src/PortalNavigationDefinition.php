@@ -53,20 +53,27 @@ final readonly class PortalNavigationDefinition implements ContributionDefinitio
         }
         $this->capability = Capability::fromString($capability)->value();
         if (
-            trim($label) === ''
+            !mb_check_encoding($label, 'UTF-8') || trim($label) === ''
             || mb_strlen($label) > 80
-            || trim($description) === ''
+            || !mb_check_encoding($description, 'UTF-8') || trim($description) === ''
             || mb_strlen($description) > 255
         ) {
             throw new InvalidArgumentException('Portal navigation labels or descriptions are invalid.');
         }
-        if (preg_match('#^/(?:[a-z0-9][a-z0-9-]*(?:/|$))*$#D', $path) !== 1 || str_contains($path, '..')) {
+        if (
+            strlen($path) > 2048
+            || preg_match('#^/(?:[a-z0-9][a-z0-9-]*(?:/|$))*$#D', $path) !== 1
+            || str_contains($path, '..')
+        ) {
             throw new InvalidArgumentException('A contributed portal navigation path is unsafe.');
         }
         if (preg_match('/^[a-z][a-z0-9-]{0,63}$/D', $icon) !== 1) {
             throw new InvalidArgumentException('A contributed portal navigation icon is invalid.');
         }
-        if ($priority < 0 || $priority > 100_000 || mb_strlen($keywords) > 500) {
+        if (
+            $priority < 0 || $priority > 100_000
+            || !mb_check_encoding($keywords, 'UTF-8') || mb_strlen($keywords) > 500
+        ) {
             throw new InvalidArgumentException('Portal navigation ordering or keywords are invalid.');
         }
     }
