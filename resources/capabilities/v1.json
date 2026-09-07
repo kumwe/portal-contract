@@ -1,0 +1,21 @@
+{
+  "schema": "kumwe-package-capabilities/v1",
+  "package": "kumwe/portal-contract",
+  "namespace": "Kumwe\\Portal\\Contract\\",
+  "responsibility": "Explicitly admitted portal contribution declarations and bounded presentation contracts.",
+  "non_responsibilities": [
+    "host authorization",
+    "persistence adapters",
+    "active registries",
+    "HTTP routing",
+    "template rendering",
+    "transactions"
+  ],
+  "capabilities": [
+    {
+      "id": "portal-contract",
+      "description": "Explicitly admitted portal contribution declarations and bounded presentation contracts."
+    }
+  ],
+  "completion_claim": false
+}
