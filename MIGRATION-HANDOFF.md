@@ -44,7 +44,7 @@ target:
   artifact_identity: "kumwe/portal-contract"
   canonical_namespace_or_abi: "Kumwe\\Portal\\Contract\\"
   branch: codex/integration-readiness-20260908
-  pull_request: "https://github.com/kumwe/portal-contract/pull/4"
+  pull_request: https://github.com/kumwe/portal-contract/pull/5
 ownership:
   responsibility: "Explicitly admitted portal contribution declarations and bounded presentation contracts."
   non_responsibilities:
@@ -73,7 +73,7 @@ ownership:
       sha256: "5a16c05e97fba8b836d6743cdf2e4d953b627b63829d210b304852380170598e"
     -
       path: "resources/public-api/signature-details-v1.json"
-      sha256: "6bbac8072ee1ca00c8442592abcbdccc1d6fbfe4d6073757041e09671de43d9a"
+      sha256: "68ea42629f95a8dc29c0488e74a1cd210346a34a90c8e47272829fd1f70bda3c"
   intentionally_excluded:
     - "SDK HTTP bindings and renderers remain host-owned"
 framework_php:
