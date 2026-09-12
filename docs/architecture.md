@@ -1,7 +1,12 @@
 # Architecture
 
-Explicitly admitted portal contribution declarations and bounded presentation contracts.
+The package provides immutable portal workspace, navigation, route, template and admission declarations.
+Source provenance is recorded in [source-map.json](source-map.json). There is no Core or Extension SDK production
+dependency. Values perform deterministic validation and serialization without I/O, ambient state or DI registration.
 
-Source provenance is recorded in [source-map.json](source-map.json). The package has no App or Extension SDK production dependency. Ports define persistence requirements; concrete implementations remain host-owned. No global state, DI registration or alternate host is introduced.
+Contribution owns contributor identity and identifier/registry policy; Access Control owns Capability grammar.
+PortalContributionAdmission composes those contracts to require same-owner declarations/references, exact retained
+capability requirements and explicit exposure opt-in. It does not establish trust, authority or runtime activation.
 
-The current baseline is Extension SDK, not App. Host executable HTTP bindings remain SDK/App-owned until a coordinated neutral-contract successor is released. Contribution owns identity and registry policy; access-control owns capability grammar.
+Core and SDK retain executable HTTP bindings, renderers, active registries, authentication, persistence and delivery.
+The [Core contract](core-contract.md) and [integration guide](integration.md) define these boundaries and test ownership.

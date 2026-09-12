@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Standardize linked package, CI, PHP and license badges with current install and Core/SDK contract guidance.
+- Replace obsolete handoff/readiness narratives with a maintained release record, preserving semantic evidence.
+- Require release-record/Core-contract bytes in archive verification and retain all manifest/signature checks.
+- Remove the obsolete Access Control VCS override; use Packagist with unchanged exact dependency versions.
+
 ## [0.2.1] - 2026-09-08
 
 - Align exact production requirements with the coordinated, validated extraction package graph.
