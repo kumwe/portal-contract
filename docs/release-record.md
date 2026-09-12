@@ -57,7 +57,7 @@ ownership:
     - path: "resources/public-api/v1.json"
       sha256: "b99190ab6d5b2fc8bad4eb0b869fb3a3f3d80ea12a08b6d0bb8e68e1e5030ee4"
     - path: "resources/capabilities/v1.json"
-      sha256: "34ee89b3053fdca0fba4adb90a56b9de04fde0097b672578dedf31ea617a6b4c"
+      sha256: "d6c1a21b0c186cc6409bb3f13bd6a63b84614eea0339f371a1fdf429681c97bb"
     - path: "resources/service-map/v1.json"
       sha256: "5a16c05e97fba8b836d6743cdf2e4d953b627b63829d210b304852380170598e"
     - path: "resources/public-api/signature-details-v1.json"
