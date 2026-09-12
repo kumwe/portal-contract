@@ -1,12 +1,16 @@
-# Dependency status
+# Dependency contract
 
-The runtime dependency graph uses exact published Kumwe versions. The following source tags are the reviewed dependency coordinates; this table is not an external release attestation.
+The runtime uses the following exact published Kumwe dependencies through Packagist:
 
-| Package | Exact version | Tag commit |
+| Package | Exact version | Responsibility |
 | --- | --- | --- |
-| `kumwe/access-control` | `0.1.0` | `54dbaa1dbffeb09ba390a5e75e8adc951c437a41` |
-| `kumwe/contribution` | `0.1.0` | `0504e87c836ca61edadc92df4203d6ccba8f0eca` |
+| `kumwe/access-control` | `0.1.2` | Canonical capability values and grammar |
+| `kumwe/contribution` | `0.1.1` | Contributor ownership, identifier policy and definition contract |
 
-A floating `latest`, `*` or development branch is not an immutable release coordinate. A newer direct pin must be compatible with every transitive exact pin; update the dependency train bottom-up and verify each successor before publishing a dependent package. Existing exact dependencies are retained here to avoid creating an unsatisfiable mixed graph.
+Composer metadata is authoritative. The dependency-readiness gate keeps evidence coordinates aligned with those
+exact requirements. Publication verifies selected stable version tags against Composer source and dist identities.
+The clean archive consumer resolves these same registry dependencies without VCS repository overrides.
 
-Composer repository configuration is root-only. Until all packages are discoverable through Packagist, a consumer must reproduce the explicit VCS repositories from composer.json and those required by its full dependency graph. The built-archive consumer gate exercises this resolution.
+Select compatible exact versions together with transitive constraints and commit the consumer lockfile. A package
+version or successful source test run does not supply an independent release attestation or prove Core integration.
+Existing published tags and archives remain unchanged; [release guidance](releasing.md) defines verification.

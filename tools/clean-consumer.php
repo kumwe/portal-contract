@@ -16,7 +16,7 @@ try {
     $archive = $workspace . '/candidate.zip';
     $zip = new ZipArchive();
     if ($zip->open($archive) !== true) { throw new RuntimeException('Archive unreadable.'); }
-    foreach (['composer.json', 'resources/public-api/v1.json', 'resources/public-api/signature-details-v1.json', 'resources/capabilities/v1.json', 'resources/service-map/v1.json', 'docs/public-api.md', 'examples/standalone.php'] as $required) {
+    foreach (['composer.json', 'README.md', 'CHARTER.md', 'docs/core-contract.md', 'docs/release-record.md', 'resources/public-api/v1.json', 'resources/public-api/signature-details-v1.json', 'resources/capabilities/v1.json', 'resources/service-map/v1.json', 'docs/public-api.md', 'examples/standalone.php'] as $required) {
         if ($zip->getFromName($required) === false) { throw new RuntimeException('Missing archive entry: ' . $required); }
     }
     for ($i = 0; $i < $zip->numFiles; $i++) {
@@ -29,7 +29,7 @@ try {
     if (json_decode($zip->getFromName('composer.json'), true, 512, JSON_THROW_ON_ERROR) !== $metadata) {
         throw new RuntimeException('Archived metadata differs from the candidate.');
     }
-    foreach (['resources/public-api/v1.json', 'resources/public-api/signature-details-v1.json', 'resources/capabilities/v1.json', 'resources/service-map/v1.json', 'docs/public-api.md'] as $manifest) {
+    foreach (['docs/core-contract.md', 'docs/release-record.md', 'resources/public-api/v1.json', 'resources/public-api/signature-details-v1.json', 'resources/capabilities/v1.json', 'resources/service-map/v1.json', 'docs/public-api.md'] as $manifest) {
         if ($zip->getFromName($manifest) !== file_get_contents($root . '/' . $manifest)) {
             throw new RuntimeException('Archive contract differs from reviewed source: ' . $manifest);
         }
