@@ -2,7 +2,7 @@
 schema: kumwe-package-release-record/v1
 artifact_kind: "framework_php"
 migration_id: "KUMWE-MIG-2026-037"
-change_set: "KUMWE-CS-2026-034"
+change_set: "KUMWE-CS-2026-037"
 source:
   app:
     repository: "https://github.com/kumwe/app"
@@ -55,13 +55,13 @@ ownership:
   next_consumer: "kumwe/app"
   public_manifests:
     - path: "resources/public-api/v1.json"
-      sha256: "b99190ab6d5b2fc8bad4eb0b869fb3a3f3d80ea12a08b6d0bb8e68e1e5030ee4"
+      sha256: "74893824d51a7f56c8a43b6a8332b4b4bbe208c5dd83df68155162d4bf92aa28"
     - path: "resources/capabilities/v1.json"
-      sha256: "d6c1a21b0c186cc6409bb3f13bd6a63b84614eea0339f371a1fdf429681c97bb"
+      sha256: "7f8ee0c99d61a129ee78323f71705472cdea84d94173911fd1d2913eabf22a0b"
     - path: "resources/service-map/v1.json"
-      sha256: "5a16c05e97fba8b836d6743cdf2e4d953b627b63829d210b304852380170598e"
+      sha256: "bfd8a1ff475ef17626b116895e305f9b9eb99963dc068e35cfe967f73799203e"
     - path: "resources/public-api/signature-details-v1.json"
-      sha256: "68ea42629f95a8dc29c0488e74a1cd210346a34a90c8e47272829fd1f70bda3c"
+      sha256: "650656da58c410979e1f1a91a01b83ab862e55c1de8a59c561a085b557f81d26"
   intentionally_excluded:
     - "SDK HTTP bindings and renderers remain host-owned"
 framework_php:
@@ -199,7 +199,7 @@ documentation:
   integration_or_consumer: "docs/integration.md"
   examples:
     - "examples/standalone.php"
-  changelog_record: "CHANGELOG.md ## 0.2.1"
+  changelog_record: "CHANGELOG.md ## 0.2.2"
 release_expectations:
   version_policy: "SemVer; exact pre-1.0 consumer pins and independent source/archive verification."
   expected_artifact_types:
