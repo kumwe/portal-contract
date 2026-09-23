@@ -20,7 +20,7 @@ Explicitly admitted portal contribution declarations and bounded presentation co
 Install the published Composer package with an exact pre-1.0 pin:
 
 ```sh
-composer require kumwe/portal-contract:0.2.1
+composer require kumwe/portal-contract:0.2.2
 ```
 
 ```php

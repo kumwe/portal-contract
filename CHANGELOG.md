@@ -7,6 +7,11 @@
 - Require release-record/Core-contract bytes in archive verification and retain all manifest/signature checks.
 - Remove the obsolete Access Control VCS override; use Packagist with unchanged exact dependency versions.
 
+## [0.2.2] - 2026-09-23
+
+- Correct the release-record change set from KUMWE-CS-2026-034 to KUMWE-CS-2026-037 so it shares the sequence number of migration KUMWE-MIG-2026-037; the former identifier belongs to kumwe/content-model, and the App ledger never renumbers.
+- Retain runtime source, public API, manifest symbol content and the exact published dependency tuple unchanged; only the release identity and the record identifier move.
+
 ## [0.2.1] - 2026-09-08
 
 - Align exact production requirements with the coordinated, validated extraction package graph.
